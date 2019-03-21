@@ -149,3 +149,40 @@ $gray: #a3a3a3;
     text-align: center;
   }
 }
+
+/* section */
+
+.section {
+  font-family: "Helvetica",sans-serif;
+  margin-top: 50px;
+  padding: 0 25px;
+  &__ttl {
+    font-family: "Orbitron",sans-serif;
+    font-size: 1.25rem;
+    color: $gray;
+    &-strong {
+      font-size: 1.5rem;
+      color: white;
+    }
+  }
+}
+
+/* products */
+
+.products {
+  &__item {
+    margin: 40px 0 50px 0;
+    width: 100%;
+    &-img {
+      width: 100%;
+    }
+    &-ttl {
+      font-size: 1rem;
+      margin: 20px 0 10px 0;
+    }
+    &-desc {
+      line-height: 1rem;
+      font-size: 0.75rem;
+    }
+  }
+}
