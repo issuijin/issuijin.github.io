@@ -13,11 +13,11 @@ a {
   text-decoration: none;
 }
 
-$gray: #a3a3a3;
 
 /* header */
 
 .header {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,13 +25,14 @@ $gray: #a3a3a3;
   display: flex;
   justify-content: space-between;
   padding: 25px;
+  background-color: rgba(0, 0, 0, 0.75);
   &__txt {
     font-size: 1rem;
   }
   &__subtxt {
     margin-top: 5px;
     font-size: 0.6rem;
-    color: $gray;
+    color: #a3a3a3;
   }
 }
 
@@ -159,7 +160,7 @@ $gray: #a3a3a3;
   &__ttl {
     font-family: "Orbitron",sans-serif;
     font-size: 1.25rem;
-    color: $gray;
+    color: #a3a3a3;
     &-strong {
       font-size: 1.5rem;
       color: white;
@@ -184,5 +185,59 @@ $gray: #a3a3a3;
       line-height: 1rem;
       font-size: 0.75rem;
     }
+  }
+}
+
+/* profile */
+
+.profile {
+  &__icon {
+    margin: 50px auto 30px auto;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    overflow: hidden;
+    &-img {
+      position: absolute;
+      top: 0;
+      left: -50px;
+      height: 100px
+    }
+  }
+  &__name {
+    text-align: center;
+    font-family: "Orbitron",sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+  &__txt {
+    margin: auto;
+    font-size: 0.75rem;
+    font-family: "Helvetica",sans-serif;
+    font-weight: lighter;
+    max-width: 300px;
+    width: calc(100% - 50px);
+    height: 100px;
+  }
+}
+
+/* skill */
+
+.skill {
+  margin: auto;
+  max-width: 350px;
+  width: calc(100% - 10px);
+  &__ttl {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  &__name {
+    font-family: "Orbitron",sans-serif;
+    font-size: 0.75rem;
+  }
+  &__desc {
+    margin-top: 10px;
+    font-size: 0.675rem;
   }
 }
