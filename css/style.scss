@@ -25,7 +25,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 25px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 1);
   &__txt {
     font-size: 1rem;
   }
@@ -123,7 +123,7 @@ a {
       opacity: 1;
       left: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.8);
 
     }
   }
@@ -146,8 +146,24 @@ a {
   &__scroll {
     width: 100%;
     position: absolute;
-    top: calc(100vh - 3rem);
+    bottom: 60px;
     text-align: center;
+    &-arrow {
+      position: absolute;
+      bottom: 34px;
+      left: calc(50% - 7px);
+      color: #ffffff;
+      display: block;
+      margin: auto;
+      width: 14px;
+      height: 14px;
+      border-bottom: solid 1px currentColor;
+      border-left: solid 1px currentColor;
+      transform: rotate(-45deg);
+      & + .main-visual__scroll-arrow {
+        bottom: 30px;
+      }
+    }
   }
 }
 
@@ -155,7 +171,7 @@ a {
 
 .section {
   font-family: "Helvetica",sans-serif;
-  margin-top: 50px;
+  margin-top: 100px;
   padding: 0 25px;
   &__ttl {
     font-family: "Orbitron",sans-serif;
@@ -216,8 +232,7 @@ a {
     font-size: 0.75rem;
     font-family: "Helvetica",sans-serif;
     font-weight: lighter;
-    max-width: 300px;
-    width: calc(100% - 50px);
+    max-width: 350px;
     height: 100px;
   }
 }
@@ -227,17 +242,15 @@ a {
 .skill {
   margin: auto;
   max-width: 350px;
-  width: calc(100% - 10px);
   &__ttl {
     margin-top: 20px;
     margin-bottom: 20px;
   }
   &__name {
     font-family: "Orbitron",sans-serif;
-    font-size: 0.75rem;
   }
   &__desc {
     margin-top: 10px;
-    font-size: 0.675rem;
+    font-size: 0.75rem;
   }
 }
