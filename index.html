@@ -4,11 +4,13 @@
     <!-- Meta tag -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width  initial-scale=1">
     <!-- Title -->
     <title>issui ikeda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/jquery.fullpage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
@@ -25,68 +27,117 @@
             <span></span>
         </div>
     </label>
-    <ul class="nav">
-        <li class="nav__item"><a href="">Top</a></li>
-        <li class="nav__item"><a href="">Product</a></li>
-        <li class="nav__item"><a href="">Profile</a></li>
-        <li class="nav__item"><a href="">Contact</a></li>
+    <ul id="nav" class="nav">
+        <li class="nav__item"><a href="#Top" onclick="close_hamburger()">Top</a></li>
+        <li class="nav__item"><a href="#about" onclick="close_hamburger()">About</a></li>
+        <li class="nav__item"><a href="#skill" onclick="close_hamburger()">My skill</a></li>
+        <li class="nav__item"><a href="#works" onclick="close_hamburger()">Works</a></li>
     </ul>
 </header>
 
-<div class="main-visual">
-    <p class="main-visual__catchphrase">All is Everithing.<br>Solve customer problems.</p>
-    <img class="main-visual__img" src="item/top2.png" alt="">
-    <div class="main-visual__scroll">scroll</div>
-    <div class="main-visual__scroll-arrow"></div>
-    <div class="main-visual__scroll-arrow"></div>
+<div id="fullpage">
+    <section class="section main-visual"><h1>issui is issui</h1><img class="main-visual__bar" src="./assets/item/bar-left.svg" alt=""></section>
+
+    <section class="section">
+        <h1 class="section__ttl">About</h1>
+        <div class="about">
+            <div class="about__icon"><img class="about__icon-img" src="./assets/item/icon.jpg" alt=""></div>
+            <ul>
+                <li class="about__data">
+                    <h1 class="about__data-ttl">Profile</h1>
+                    <img class="about__data-bar" src="./assets/item/bar-left.svg" alt="">
+                    <p class="about__data-desc">こんにちは、N高等学校の池田逸水と申します。<br>WEBが好きで、普段はデザインやフロントエンドの開発をしています。</p>
+                </li>
+                <li class="about__data">
+                    <h1 class="about__data-ttl">Achievement</h1>
+                    <img class="about__data-bar" src="./assets/item/bar-left.svg" alt="">
+                    <p class="about__data-desc">N高等学校起業部<br>IT企業3社でインターン<br>日本ゲーム大賞 1次予選突破（6月に東京での2次審査出場予定）</p>
+                </li>
+                <li class="about__data">
+                    <h1 class="about__data-ttl">SNS</h1>
+                    <img class="about__data-bar" src="./assets/item/bar-left.svg" alt="">
+                    <p class="about__data-desc">Twitter<br>Gmail</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h1 class="section__ttl">My skill</h1>
+        <ul class="skill">
+            <li class="skill__item">
+                <div>
+                    <h1 class="skill__item-ttl">Coding</h1>
+                    <img class="skill__item-bar" src="./assets/item/bar-left.svg" alt="">
+                </div>
+                <p class="skill__item-desc">主にSCSSやBEMを使用し、保守性の高いコードを書きます。<br>また、アニメーションの実装も最適な手段で実装します。</p>
+            </li>
+            <li class="skill__item">
+                <div>
+                    <h1 class="skill__item-ttl">Design</h1>
+                    <img class="skill__item-bar" src="./assets/item/bar-left.svg" alt="">
+                </div>
+                <p class="skill__item-desc">UI/UXデザインやアニメーションデザインなどを行います。自分本位にならずユーザーを第一に考えるよう心がけています。</p>
+            </li>
+            <li class="skill__item">
+                <div>
+                    <h1 class="skill__item-ttl">Develop</h1>
+                    <img class="skill__item-bar" src="./assets/item/bar-left.svg" alt="">
+                </div>
+                <p class="skill__item-desc">個人での開発だけでなく、GitやZeplin（デザイン共有ツール）、Slackなどを利用したチームでの開発にも慣れています。</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h1 class="section__ttl">Works</h1>
+        <div class="works">
+            <ul class="works__container">
+                <li class="works__container-item"></li>
+                <li class="works__container-item"></li>
+                <li class="works__container-item"></li>
+            </ul>
+            <ul class="works__container">
+                <li class="works__container-item"></li>
+                <li class="works__container-item"></li>
+                <li class="works__container-item"></li>
+            </ul>
+        </div>
+    </section>
 </div>
 
-<section class="section">
-    <h1 class="section__ttl"><span class="section__ttl-strong">P</span>roduct</h1>
-    <ul class="products">
-        <li class="products__item">
-            <img class="products__item-img" src="item/example.jpg" alt="">
-            <h2 class="products__item-ttl">ZiZi　コーポレートサイト</h2>
-            <p class="products__item-desc">芸術家であるZiZi様のポートフォリオサイトの<br>デザインとコーディングをさせていただきました。</p>
-        </li>
-        <li class="products__item">
-            <img class="products__item-img" src="item/example.jpg" alt="">
-            <h2 class="products__item-ttl">ZiZi　コーポレートサイト</h2>
-            <p class="products__item-desc">芸術家であるZiZi様のポートフォリオサイトの<br>デザインとコーディングをさせていただきました。</p>
-        </li>
-    </ul>
-</section>
+<div class="copyright">© 2019 issui ikeda</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="./assets/js/jquery.fullpage.min.js"></script>
+<script src="./assets/js/jquery.easings.min.js"></script>
+<script src="./assets/js/scrolloverflow.min.js"></script>
+<script src="./assets/js/jquery.drawsvg.js"></script>
+<script>
+    $(function(){
+        $('#fullpage').fullpage({
+            scrollingSpeed: 1000,
 
-<section class="section">
-    <h1 class="section__ttl"><span class="section__ttl-strong">P</span>rofile</h1>
-    <div class="profile">
-        <div class="profile__icon">
-            <img class="profile__icon-img" src="item/icon.jpg" alt="">
-        </div>
-        <h1 class="profile__name">issui ikeda</h1>
-        <p class="profile__txt">主にWebデザイン・コーディングをしています。 レスポンシブデザイン、アニメーションデザインに加えて、それらの実装をします。</p>
-    </div>
-    <div class="skill">
-        <h1 class="skill__ttl">使用言語</h1>
-        <ul>
-            <li>
-                <h1 class="skill__name">- HTML5</h1>
-                <p class="skill__desc">適切なタグとクラス名でマークアップすることが可能です。<br>また、主に使用する命名規則はBEMです。</p>
-            </li>
-        </ul>
-        <h1 class="skill__ttl">使用ソフト</h1>
-        <ul>
-            <li>
-                <h1 class="skill__name">- WebStorm</h1>
-                <p class="skill__desc">WEB開発の時は主にこのソフトを使用しています。</p>
-            </li>
-        </ul>
-    </div>
-</section>
+            anchors:['Top','about', 'skill', 'works'],
+            menu: '#nav',
+            navigation: true,
+            navigationPosition: 'right',
+            slidesNavigation: true,
+            slidesNavPosition: 'bottom',
 
-<section class="section">
-    <h1 class="section__ttl"><span class="section__ttl-strong">C</span>ontact</h1>
-</section>
+            easing: 'easeInOutCubic',
 
+            keyboardScrolling: true
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    var mySVG = $('svg').drawsvg();
+    mySVG.drawsvg('animate');
+
+    function close_hamburger() {
+        document.getElementById("hamburger-check").checked = false;
+    }
+</script>
 </body>
 </html>
