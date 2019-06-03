@@ -247,10 +247,14 @@ a {
       display: none;
     }
     &-item {
+      overflow: hidden;
       margin: 0 10px 10px 0;
-      min-width: 300px;
+      width: 300px;
       height: 200px;
       background-color: #ffffff;
+      img {
+        width: 100%;
+      }
     }
   }
 }
