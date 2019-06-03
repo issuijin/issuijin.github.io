@@ -1,9 +1,11 @@
+
 body {
   font-family: "Lato",sans-serif;
   background-color: #F2F2F2;
   color: black;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.25rem;
+  overflow-scrolling: touch;
 }
 
 input {
@@ -127,7 +129,7 @@ a {
       opacity: 1;
       left: 0;
       width: 100%;
-      background-color: #F2F2F2;
+      background-color: #ffffff;
     }
   }
 }
@@ -233,15 +235,26 @@ a {
 /* works */
 
 .works {
+  overflow-scrolling: touch;
   overflow-x: scroll;
+  &__wrapper {
+    overflow: hidden;
+  }
   &__container {
     display: flex;
     justify-content: center;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     &-item {
-      margin: 10px;
-      min-width: 300px;
+      overflow: hidden;
+      margin: 0 10px 10px 0;
+      width: 300px;
       height: 200px;
       background-color: #ffffff;
+      img {
+        width: 100%;
+      }
     }
   }
 }
@@ -264,7 +277,10 @@ a {
 
 }
 @media (max-width: 992px) {
-
+  .works__container {
+    justify-content: left;
+    margin-left: 20px;
+  }
 }
 @media (max-width: 768px) {
   .section {
