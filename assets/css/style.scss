@@ -152,7 +152,7 @@ a {
   font-size: 4rem;
   line-height: 100vh;
   text-align: center;
-  font-family: "Petit Formal Script",sans-serif;
+  font-family: "Petit Formal Script",sans-serif !important;
   &__bar {
     width: 500px;
     position: absolute;
@@ -264,7 +264,7 @@ a {
   line-height: 200px;
   text-align: center;
   font-size: 1.5rem;
-  background-color: black;
+  background-color: #515151;
   color: white;
 }
 
