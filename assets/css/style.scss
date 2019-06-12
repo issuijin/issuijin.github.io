@@ -139,8 +139,9 @@ a {
 .section {
   width: 100%;
   height: 100vh;
+  max-height: 568px;
   &__ttl {
-    line-height: 30vh;
+    line-height: 25vh;
     font-size: 3rem;
     text-align: center;
   }
@@ -174,12 +175,12 @@ a {
     width: 350px;
     height: 480px;
     &-img {
-      margin-left: calc(-530px + 20vw);
+      margin-left: calc(-230px);
       height: 480px;
     }
   }
   &__data {
-    margin: 10px 0 0 50px;
+    margin: 0 0 0 50px;
     &-ttl {
       font-size: 2rem;
       margin: 0 0 20px 0;
@@ -190,6 +191,7 @@ a {
       max-width: 290px;
     }
     &-desc {
+      width: calc(45vw - 40px);
       font-size: 0.875rem;
       font-family: "Hiragino Kaku Gothic Pro",sans-serif;
       font-weight: 100;
@@ -201,12 +203,19 @@ a {
       }
     }
   }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 480px;
+  }
 }
 
 /* skill */
 
 .skill {
-  margin-top: 5vh;
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
   &__item {
@@ -298,7 +307,8 @@ a {
     height: 100vh;
     &__ttl {
       line-height: 25vh;
-      font-size: 2rem;
+      margin-bottom: -2vh;
+      font-size: 1.5rem;
       text-align: center;
     }
   }
@@ -315,19 +325,24 @@ a {
     &__icon {
       width: 100px;
       &-img {
-        margin-left: calc(-480px + 12vw);
+        margin-left: calc(-300px);
+        height: 430px;
       }
     }
     &__data {
       margin: 10px 0 0 40px;
       &-ttl {
-        font-size: 1.5rem;
-        margin: 0 0 10px 0;
+        font-size: 1.25rem;
+        margin: 0 0 5px 0;
       }
       &-desc {
+        display: flex;
         width: calc(100% - 60px);
         font-size: 0.75rem;
         line-height: 1.25rem;
+        a {
+          margin: 0 15px 0 0;
+        }
       }
       & + .about__data {
         .about__data-ttl {
@@ -348,8 +363,8 @@ a {
       &-ttl {
         text-align: left;
         width: 200px;
-        font-size: 1.5rem;
-        margin: 0 0 10px 20px;
+        font-size: 1.25rem;
+        margin: 0 0 0 20px;
       }
       &-bar {
         width: 250px;
@@ -359,6 +374,15 @@ a {
         max-width: initial;
         font-size: 0.75rem;
         line-height: 1.25rem;
+      }
+    }
+  }
+  .works {
+    &__container {
+      &-item {
+        width: 270px;
+        min-width: 270px;
+        height: 180px;
       }
     }
   }

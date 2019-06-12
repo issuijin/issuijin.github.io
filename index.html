@@ -43,8 +43,8 @@
     <section class="section">
         <h1 class="section__ttl">About</h1>
         <div class="about">
-            <div class="about__icon"><img class="about__icon-img" src="./assets/item/icon.jpg" alt=""></div>
-            <ul>
+            <div class="about__icon"><img class="about__icon-img" src="./assets/item/issui.jpg" alt=""></div>
+            <ul class="about__list">
                 <li class="about__data">
                     <h1 class="about__data-ttl">Profile</h1>
                     <img class="about__data-bar" src="./assets/item/bar-left.svg" alt="">
@@ -53,12 +53,12 @@
                 <li class="about__data">
                     <h1 class="about__data-ttl">Achievement</h1>
                     <img class="about__data-bar" src="./assets/item/bar-left.svg" alt="">
-                    <p class="about__data-desc">N高等学校起業部<br>IT企業3社でインターン<br>日本ゲーム大賞 1次予選突破（6月に東京での2次審査出場予定）</p>
+                    <p class="about__data-desc">N高等学校起業部<br>IT企業3社でインターン<br>日本ゲーム大賞 TGSでの決勝大会進出</p>
                 </li>
                 <li class="about__data">
                     <h1 class="about__data-ttl">Contact</h1>
                     <img class="about__data-bar" src="./assets/item/bar-left.svg" alt="">
-                    <p class="about__data-desc">Twitter<br>Gmail</p>
+                    <p class="about__data-desc"><a href="https://twitter.com/issui_ikeda">Twitter</a><br><a href="issui.real@gmail.com">Gmail</a></p>
                 </li>
             </ul>
         </div>
@@ -72,7 +72,7 @@
                     <h1 class="skill__item-ttl">Coding</h1>
                     <img class="skill__item-bar" src="./assets/item/bar-left.svg" alt="">
                 </div>
-                <p class="skill__item-desc">主にSCSSやBEMを使用し、保守性の高いコードを書きます。<br>また、アニメーションの実装も最適な手段で実装します。</p>
+                <p class="skill__item-desc">主にSCSSやRSCSS、BEMを使用し、保守性の高いコードを書きます。<br>また、アニメーションの実装も最適な手段で実装します。</p>
             </li>
             <li class="skill__item">
                 <div>
@@ -119,7 +119,7 @@
 <script>
     $(function(){
         $('#fullpage').fullpage({
-            scrollingSpeed: 1000,
+            scrollingSpeed: 700,
 
             anchors:['Top','about', 'skill', 'works'],
             menu: '#nav',
