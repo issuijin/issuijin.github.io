@@ -152,12 +152,14 @@ a {
   font-size: 4rem;
   line-height: 100vh;
   text-align: center;
-  font-family: "Petit Formal Script",sans-serif !important;
   &__bar {
     width: 500px;
     position: absolute;
     top: calc(50vh + 2.25rem);
     left: calc(50% - 250px);
+  }
+  &__txt {
+    font-family: "Petit Formal Script",sans-serif !important;
   }
 }
 
