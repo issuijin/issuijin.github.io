@@ -6,6 +6,8 @@ body {
   font-weight: 200!important;
   line-height: 1.25rem;
   overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
@@ -334,6 +336,9 @@ a {
       &-ttl {
         font-size: 1.25rem;
         margin: 0 0 5px 0;
+      }
+      &-bar {
+        margin: 0 0 10px -20px;
       }
       &-desc {
         display: flex;
