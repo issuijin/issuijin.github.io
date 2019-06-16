@@ -153,10 +153,11 @@ a {
 
 .main-visual {
   &__bar {
+    display: block;
     width: 500px;
-    position: absolute;
-    top: calc(50vh + 2.25rem);
-    left: calc(50% - 250px);
+    position: relative;
+    top: 20px;
+    left: -25px;
   }
   &__txt {
     font-family: "Petit Formal Script",sans-serif !important;
@@ -321,8 +322,8 @@ a {
   .main-visual {
     &__bar {
       width: 240px;
-      top: calc(50vh + 1.25rem);
-      left: calc(50% - 120px);
+      top: 8px;
+      left: -10px;
     }
     &__txt {
       font-size: 2rem;
