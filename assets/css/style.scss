@@ -155,11 +155,12 @@ a {
   &__bar {
     display: block;
     width: 500px;
-    position: relative;
-    top: 20px;
-    left: -25px;
+    position: absolute;
+    top: 45px;
+    left: -35px;
   }
   &__txt {
+    position: relative;
     font-family: "Petit Formal Script",sans-serif !important;
     font-size: 4rem;
   }
@@ -255,6 +256,7 @@ a {
   overflow-scrolling: touch;
   overflow-x: scroll;
   &__wrapper {
+    position: relative;
     overflow: hidden;
   }
   &__container {
