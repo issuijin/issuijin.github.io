@@ -144,6 +144,16 @@
         effect: 'slide', // "slide", "fade"(フェード), "cube"(キューブ回転), "coverflow"(カバーフロー) または "flip"(平面回転)
         autoplay: false,
 
+        breakpoints: {
+            // 980ピクセル幅以下になったら
+            2080: {
+                noSwiping: false
+            },
+            // 640ピクセル幅以下になったら
+            768: {
+                noSwiping: true
+            }
+        },
 
         // ページネーションを表示する場合
         pagination: {

@@ -226,9 +226,10 @@ a {
     position: relative;
     cursor: pointer;
     transition: .3s;
-    padding: 30px 30px 60px 30px;
+    padding: 30px 30px 30px 30px;
     margin: 0 15px;
-    width: calc(25% - 60px);
+    width: calc(25% - 60px) !important;
+    height: auto!important;
     max-width: 290px;
     box-shadow: 3px 3px 10px rgba(100, 128, 247, 0.25);
     &:hover {
@@ -266,6 +267,10 @@ a {
       }
     }
   }
+}
+
+.swiper-container {
+  overflow: initial!important;
 }
 
 /* works */
@@ -338,6 +343,14 @@ a {
 @media (max-width: 992px) {
   .about__data-desc {
     width: calc(45vw - 40px);
+  }
+}
+
+//とにかく僕は普通の制服を着たJK（N高ではない）と普通の恋がしたいです！！！
+
+@media (min-width: 769px) {
+  .swiper-button-next, .swiper-button-prev {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -423,6 +436,10 @@ a {
         line-height: 1.25rem;
       }
     }
+  }
+
+  .swiper-container {
+    overflow: initial!important;
   }
   .swiper-slide {
     height: initial!important;
