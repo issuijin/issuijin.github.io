@@ -1,0 +1,64 @@
+.rains {
+  transform: rotateZ(-5deg);
+  z-index: -9999;
+  position: relative;
+  top: -10vh;
+  width: 100vw;
+  height: 150vh;
+  .rain {
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0), #000000);
+    animation: rain 4s 0s infinite;
+    &:nth-child(1) {
+      background: linear-gradient(rgba(0, 0, 0, 0), #ff545d);
+      left: calc(100% / 8 * 1);
+      animation-delay: 2s;
+    }
+    &:nth-child(2) {
+      background: linear-gradient(rgba(0, 0, 0, 0), #977bff);
+      left: calc(100% / 8 * 2);
+      animation-delay: 1s;
+    }
+    &:nth-child(3) {
+      background: linear-gradient(rgba(0, 0, 0, 0), #62ff2b);
+      left: calc(100% / 8 * 3);
+      animation-delay: 1.2s;
+    }
+    &:nth-child(4) {
+      background: linear-gradient(rgba(0, 0, 0, 0), #29ddff);
+      left: calc(100% / 8 * 4);
+      animation-delay: 0.2s;
+    }
+    &:nth-child(5) {
+      background: linear-gradient(rgba(0, 0, 0, 0), #ffa532);
+      left: calc(100% / 8 * 5);
+      animation-delay: 0.6s;
+    }
+    &:nth-child(6) {
+      background: linear-gradient(rgba(0, 0, 0, 0), #4affba);
+      left: calc(100% / 8 * 6);
+      animation-delay: 2.5s;
+    }
+    &:nth-child(7) {
+      background: linear-gradient(rgba(0, 0, 0, 0), #904eff);
+      left: calc(100% / 8 * 7);
+      animation-delay: 3s;
+    }
+    &:nth-child(8) {
+      background: linear-gradient(rgba(0, 0, 0, 0), #1abbff);
+      left: calc(100% / 8 * 8);
+      animation-delay: 1.3s;
+    }
+  }
+}
+
+@keyframes rain {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 150vh;
+  }
+}
