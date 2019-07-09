@@ -146,6 +146,7 @@
 <script src="./assets/js/jquery.easings.min.js"></script>
 <script src="./assets/js/scrolloverflow.min.js"></script>
 <script>
+
     var mySwiper = new Swiper ('.swiper-container', {
         // オプションパラメータ(一部のみ抜粋)
         speed: 600, // スライドが切り替わるトランジション時間(ミリ秒)。
@@ -177,9 +178,25 @@
             prevEl: '.swiper-button-prev', // 前のスライドボタンのセレクタ
         }
     });
+    // body読み込み時に一度だけbodyサイズを設定
+    document.body.onload = ()=>{
+        document.body.style.minHeight = window.innerHeight + 'px';
+    };
 
-</script>
-<script>
+    // リサイズを停止して500ms後にbodyサイズを設定
+    let timeoutId;
+    window.addEventListener("resize", () => {
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(() => {
+            document.body.style.minHeight = window.innerHeight + 'px';
+        }, 500);
+    });
+
+    function close_hamburger() {
+        document.getElementById("hamburger-check").checked = false;
+    }
+
     $(function(){
         $('#fullpage').fullpage({
             scrollingSpeed: 700,
@@ -196,28 +213,6 @@
             keyboardScrolling: true
         });
 
-    });
-</script>
-<script>
-    function close_hamburger() {
-        document.getElementById("hamburger-check").checked = false;
-    }
-</script>
-
-<script>
-    // body読み込み時に一度だけbodyサイズを設定
-    document.body.onload = ()=>{
-        document.body.style.minHeight = window.innerHeight + 'px';
-    };
-
-    // リサイズを停止して500ms後にbodyサイズを設定
-    let timeoutId;
-    window.addEventListener("resize", () => {
-        clearTimeout(timeoutId);
-
-        timeoutId = setTimeout(() => {
-            document.body.style.minHeight = window.innerHeight + 'px';
-        }, 500);
     });
 </script>
 </body>
