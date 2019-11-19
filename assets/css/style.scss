@@ -184,7 +184,7 @@ a {
   &__icon {
     overflow: hidden;
     width: 350px;
-    height: 480px;
+    height: 460px;
     &-img {
       width: 350px;
     }
@@ -277,38 +277,23 @@ a {
 /* works */
 
 .works {
-  width: 620px;
+  width: 580px;
   display: block;
   position: relative;
   margin: auto;
-  &__container-item {
-    position: absolute;
-    overflow: hidden;
-    width: 300px;
-    height: 200px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    img {
-      width: 100%;
-    }
-    &:nth-child(1) {
-      top: 0;
-      left: 0;
-    }
-    &:nth-child(2) {
-      top: 0;
-      left: 50%;
-    }
-
-    &:nth-child(3) {
-      top: 220px;
-      left: 0;
-    }
-
-    &:nth-child(4) {
-      top: 220px;
-      left: 50%;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      display: block;
+      margin: 10px;
+      max-width: 270px;
+      height: 180px;
+      img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
     }
   }
 }
@@ -348,8 +333,6 @@ a {
     width: calc(45vw - 40px);
   }
 }
-
-//とにかく僕は普通の制服を着たJK（N高ではない）と普通の恋がしたいです！！！
 
 @media (min-width: 769px) {
   .swiper-button-next, .swiper-button-prev {
@@ -453,21 +436,11 @@ a {
     height: 22px!important;
   }
   .works {
-    display: block;
-    position: relative;
-    margin: auto;
     width: calc(100% - 100px);
-    height: 100px;
     &__container-item {
-      width: 50%;
-      &:nth-child(3) {
-        top: calc((100vw - 100px) / 2 / 3 * 2);
-        left: 0;
-      }
-      &:nth-child(4) {
-        top: calc((100vw - 100px) / 2 / 3 * 2);
-        left: 50%;
-      }
+      width: calc(50% - 20px);
+      height: initial;
+      max-width: initial;
     }
   }
 
@@ -478,20 +451,17 @@ a {
 
 @media (max-width: 576px) {
   .works {
-    width: 340px;
+    width: 100%;
     display: block;
     position: relative;
-    margin: 30px auto auto auto;
+    margin: 0 auto auto auto;
     &__container {
       width: 100%;
       &-item {
-        background-color: #ffffff;
+        margin: 5px auto;
+        width: 55%;
         img {
-          width: 100%;
-        }
-        &:nth-child(3),
-        &:nth-child(4) {
-          top: 113px;
+          width: 100%
         }
       }
     }
